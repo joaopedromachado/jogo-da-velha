@@ -1,7 +1,9 @@
 
+// Primeiro eu inicio as variáveis.
 let board = ["","","","","","","","", ""];
 let playerTime = 0;
 let players = ["o", "x"];
+let scoreboard = [0, 0];
 let gameOver = false;
 let winStates = [
     [0,1,2],
@@ -49,6 +51,8 @@ function isWin() {
         let pos3 = sequence[2];
 
         if (board[pos1] == board[pos2] && board[pos1] == board[pos3] && board[pos1] != "") {
+            
+            scoreboard[playerTime] += 1;
             return true;
         }
     }
